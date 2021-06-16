@@ -37,7 +37,7 @@ public class App
     //bucket.waitUntilReady(Duration.parse("PT10S"));
     Collection collection = bucket.defaultCollection();
 
-    cluster.queryIndexes().createPrimaryIndex(bucketName, CreatePrimaryQueryIndexOptions.createPrimaryQueryIndexOptions().ignoreIfExists(true));
+    //cluster.queryIndexes().createPrimaryIndex(bucketName, CreatePrimaryQueryIndexOptions.createPrimaryQueryIndexOptions().ignoreIfExists(true));
 
     // Create a JSON Document
     JsonObject arthur = JsonObject.create()
@@ -56,15 +56,15 @@ public class App
     System.out.println(collection.get("u:king_arthur"));
 
     // Perform a N1QL Query
-    QueryResult result = cluster.query(
+    /*QueryResult result = cluster.query(
         String.format("SELECT name FROM `%s` WHERE $1 IN interests", bucketName),
         queryOptions().parameters(JsonArray.from("African Swallows"))
-    );
+    );*/
 
     // Print each found Row
-    for (JsonObject row : result.rowsAsObject()) {
+    /*for (JsonObject row : result.rowsAsObject()) {
       System.out.println(row);
-    }
+    }*/
 
   }
 }
