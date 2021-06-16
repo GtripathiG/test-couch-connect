@@ -40,7 +40,7 @@ public class App
     //cluster.queryIndexes().createPrimaryIndex(bucketName, CreatePrimaryQueryIndexOptions.createPrimaryQueryIndexOptions().ignoreIfExists(true));
 
     // Create a JSON Document
-    JsonObject arthur = JsonObject.create()
+    /*JsonObject arthur = JsonObject.create()
         .put("name", "Arthur")
         .put("email", "kingarthur@couchbase.com")
         .put("interests", JsonArray.from("Holy Grail", "African Swallows"));
@@ -49,11 +49,12 @@ public class App
     collection.upsert(
         "u:king_arthur",
         arthur
-    );
+    );*/
 
     // Load the Document and print it
     // Prints Content and Metadata of the stored Document
-    System.out.println(collection.get("u:king_arthur"));
+    //System.out.println(collection.get("u:king_arthur"));
+    System.out.println(collection.get("ConfigMgrLogConfig:config-manager-0"));
 
     // Perform a N1QL Query
     /*QueryResult result = cluster.query(
