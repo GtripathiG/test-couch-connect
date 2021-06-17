@@ -19,7 +19,8 @@ public class App
 {
   public static void main( String[] args )
   {
-    String endpoint = "9059cdd9-c1ce-4376-a694-36d3ec8dddfe.internal.dp.cloud.couchbase.com";
+    //String endpoint = "9059cdd9-c1ce-4376-a694-36d3ec8dddfe.internal.dp.cloud.couchbase.com";
+    String endpoint = "_couchbases._tcp.9059cdd9-c1ce-4376-a694-36d3ec8dddfe.internal.dp.cloud.couchbase.com";
     String bucketName = "cpaas";
     String username = "cpaas";
     //String password = "Administrator#324";
