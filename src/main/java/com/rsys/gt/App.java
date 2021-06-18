@@ -36,7 +36,7 @@ public class App
     Cluster cluster = Cluster.connect(endpoint,
         ClusterOptions.clusterOptions(username, password).environment(env));
     Bucket bucket = cluster.bucket(bucketName);
-    //bucket.waitUntilReady(Duration.parse("PT10S"));
+    bucket.waitUntilReady(Duration.parse("PT60S"));
     Collection collection = bucket.defaultCollection();
 
     //cluster.queryIndexes().createPrimaryIndex(bucketName, CreatePrimaryQueryIndexOptions.createPrimaryQueryIndexOptions().ignoreIfExists(true));
