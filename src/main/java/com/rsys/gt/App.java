@@ -19,12 +19,10 @@ public class App
 {
   public static void main( String[] args )
   {
-    //String endpoint = "9059cdd9-c1ce-4376-a694-36d3ec8dddfe.internal.dp.cloud.couchbase.com";
-    String endpoint = "_couchbases._tcp.9059cdd9-c1ce-4376-a694-36d3ec8dddfe.internal.dp.cloud.couchbase.com";
+    String endpoint = "6ec07fdc-6483-4258-ab93-fe15c5b0a5e5.internal.dp.cloud.couchbase.com";
     String bucketName = "cpaas";
-    String username = "cpaas";
-    //String password = "Administrator#324";
-    String password = "Cpaas#123";
+    String username = "admin";
+    String password = "Admin#123";
 
     ClusterEnvironment env = ClusterEnvironment.builder()
         .securityConfig(SecurityConfig.enableTls(true)
@@ -36,7 +34,7 @@ public class App
     Cluster cluster = Cluster.connect(endpoint,
         ClusterOptions.clusterOptions(username, password).environment(env));
     Bucket bucket = cluster.bucket(bucketName);
-    bucket.waitUntilReady(Duration.parse("PT60S"));
+    //bucket.waitUntilReady(Duration.parse("PT60S"));
     Collection collection = bucket.defaultCollection();
 
     //cluster.queryIndexes().createPrimaryIndex(bucketName, CreatePrimaryQueryIndexOptions.createPrimaryQueryIndexOptions().ignoreIfExists(true));
