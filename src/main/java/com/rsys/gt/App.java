@@ -21,8 +21,8 @@ public class App
   {
     String endpoint = "6ec07fdc-6483-4258-ab93-fe15c5b0a5e5.internal.dp.cloud.couchbase.com";
     String bucketName = "cpaas";
-    String username = "admin";
-    String password = "Admin#123";
+    String username = "cpaas";
+    String password = "Cpaas#324";
 
     ClusterEnvironment env = ClusterEnvironment.builder()
         .securityConfig(SecurityConfig.enableTls(true)
